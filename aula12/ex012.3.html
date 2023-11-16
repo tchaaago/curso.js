@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificar Hora</title>
+    <style>
+        body{
+            background-color: rgb(15, 15, 15);
+            font: normal 14pt Arial;
+            color: rgb(157, 224, 0);
+            text-align: center;
+            margin: 50px;
+        }
+        div#res{
+            background: rgb(157, 224, 0);
+            color: rgb(0, 0, 0);
+            font: normal 13pt Arial;
+            width: center;
+            height: center;
+            line-height: center;
+            text-align: center;
+            margin-top: 20px
+        }
+    </style>
+</head>
+<body>
+    <h1><strong>Olha a Hora!</strong></h1>
+    <button onclick="VerificarHoras()">Verificar</button>
+    <div id="res"></div>
+    <script>
+        var horaAtual = new Date()
+        var horas = horaAtual.getHours()
+        let minute = String(horaAtual.getMinutes()).padStart(2, "0")
+        let saudacao = ""
+
+        function VerificarHoras(){
+            if (horas < 6) {
+                saudacao = 'Boa madrugada!'
+            } else if (horas < 12) {
+                saudacao ='Bom dia!'
+            } else if (horas < 18) {
+                 saudacao = 'Boa tarde!'
+            } else {
+                saudacao = 'Boa noite!'
+            }
+            window.document.getElementById('res').innerHTML = `<p1>Agora são <strong>${horas}:${minute} horas!</strong></p><strong>${saudacao}</strong>`
+            //res.style.background = 'white'
+        }
+        
+
+    </script>
+    
+</body>
+</html>

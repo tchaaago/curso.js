@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AMC Quixadá</title>
+    <style>
+        body{
+            background-color: rgb(132, 63, 243);
+            font: normal 14pt Arial;
+            color: rgb(255, 208, 0);
+        }
+        input{
+            font: normal 12pt Arial;
+            color: rgb(4, 0, 255);
+            width: 100px;
+        }
+        div{
+            font: normal 14pt Arial;
+            color: rgb(255, 255, 255);
+        }
+    </style>
+</head>
+<body>
+    <h1><strong>Sistema de Multas de Carroças - Quixadá</strong></h1>
+    Velocidade da carroça: <input type="number" name = "txtvel" id = "txtvel"> Km/h
+    <input type="button" value="Verificar" onclick="calcular()">
+    <div id = "res">
+    </div>
+
+    <script>
+        function calcular(){
+            var txtv = window.document.querySelector('input#txtvel')
+            var res = window.document.querySelector('div#res')
+            var vel = Number(txtv.value)
+            res.innerHTML = `<p>Sua carroça tá correndo a <strong>${vel}Km/h</strong>.</p>`
+            if (vel > 60){ //essa é uma condiçao simples por apenas apresentar uma possibilidade, pois nao existe o else
+                res.innerHTML += `<p>Tá rápido demais. Vai levar uma <strong>MULTA</strong>, seu corno!</p>`
+            }
+            res.innerHTML += `<p>Trate bem o seu jumento!</p>`
+
+        }
+
+    </script>
+
+</body>
+</html>

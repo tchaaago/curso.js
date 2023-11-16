@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Você é cria do Brasil?</title>
+    <style>
+        body{
+            background-color: rgb(0, 163, 0);
+            font: normal 14pt Arial;
+            color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <h1><strong>Você é ou nao é brasileiro?</strong></h1>
+    Seu país: <input type="text" name = "txtNac" id ="txtNac">
+    <input type="button" value="Verificar" onclick="submeter()">
+    <div id="res">
+
+    </div>
+    <script>
+        function submeter(){
+            var txtPaís = window.document.querySelector('input#txtNac')
+            var res = window.document.querySelector('div#res')
+            var país = String(txtPaís.value)
+            if (país != 'Brasil'){
+                res.innerHTML = `<p><strong>Você é GREEEEEEENGO!</strong></P>`
+            } else{
+                res.innerHTML = `<p>Se você é do <strong>Brasil</strong> entao você é <strong>CRIA!</strong></p>`
+            }
+          
+        }
+    </script>
+</body>
+</html>

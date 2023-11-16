@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+         body {
+            background: rebeccapurple;
+            font: normal 13pt Arial;
+        }
+        div#area {
+            background: rgb(255, 217, 0);
+            color: black;
+            font: normal 13pt Arial;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <div id = "area"> 
+        <strong>Interaja</strong>  
+    </div>
+    <!--' antes esatava assim para o uso de eventos <div id = "area" onclick="clicar()" onmouseenter = "entrar()" onmouseout = "sair()">'--> 
+
+    <script>
+        var a = window.document.getElementById('area')  //se torna global e passa a funcionar em todos blocos abaixo que o puxar,caso tivesse dentro de uma function apenas seria usado como uma variável local daquele bloco específico
+        // agora os eventos podem ser disparados dentro do JavaScript a partir do uso dos Listeners, que é um comando que fica em alerta pro que é chamado e deixa o html menos poluido
+        a.addEventListener('click', clicar)
+        a.addEventListener('mouseenter', entrar)
+        a.addEventListener('mouseout', sair)
+
+        function clicar() {
+            a.innerText = 'CLICOU!'
+            a.style.background = 'blue'
+        }
+        function entrar(){ 
+            a.innerText = 'ENTROU!'
+            a.style.background = 'green'
+        }
+        function sair(){
+            a.innerText = 'SAIU!'
+            a.style.background = 'red'
+        }
+
+    </script>
+</body>
+</html>

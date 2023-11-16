@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operação de Adição</title>
+    <style>
+        body{
+            font: normal 10pt Arial;
+        }
+        input{
+            font: normal 8pt Arial;
+            width: 100px;
+        }
+        div#res{
+            margin-top: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Somando Valores</h1>
+    <input type="number" name="txtn1" id="txtn1"> <!-- o name é importante para uma coisa e o id para outra-->
+    <input type="number" name="txtn2" id="txtn2"> <!-- O elemento input é usado para criar campos de entrada de dados, caixas, onde os usuários podem inserir informações, como texto, números, senhas e outros tipos de dados. É importante para a interaçao. O elemento input pode ter vários tipos, especificados pelo atributo type, que determina o tipo de entrada que ele aceita.-->
+    <input type="button" value="somar" onclick="somar()">
+    <div id="res">Resuldado</div>
+    <script>
+        function somar(){
+            var tn1 = window.document.getElementById('txtn1')
+            var tn2 = window.document.querySelector('input#txtn2')
+            var res = window.document.getElementById('res')
+            var n1 = Number(tn1.value)
+            var n2 = Number(tn2.value)
+            var s = n1 + n2
+            res.innerHTML = `A soma entre ${n1} e ${n2} é igual a <strong>${s}</strong>`
+
+        }
+    </script>
+</body>
+</html>
