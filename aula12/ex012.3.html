@@ -29,8 +29,8 @@
     <button onclick="VerificarHoras()">Verificar</button>
     <div id="res"></div>
     <script>
-        var horaAtual = new Date()
-        var horas = horaAtual.getHours()
+        let horaAtual = new Date()
+        let horas = horaAtual.getHours()
         let minute = String(horaAtual.getMinutes()).padStart(2, "0")
         let saudacao = ""
 
