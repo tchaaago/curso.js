@@ -8,17 +8,26 @@
 </head>
 <body>
     <header>
-        <h1>Tabuada soma</h1>
+        <h1>Gerador de tabuada</h1>
 
     </header>
     <section>
         <div>
-            <p>Número <input type="number" id= 'txtn'>
+            <p><strong>Número</strong> <input type="number" id= 'txtn'>
             <input type="button" value="Gerar" onclick="tabuada()"></p>
         </div>
         <div>
-            <select name="tabuada" id="seltab" size= "10">
+            <select name="tabuadaSoma" id="seltabSoma" size= "10">
                 <option>Soma</option>
+            </select>
+            <select name="tabuadaSub" id="seltabSub" size= "10">
+                <option>Subtração</option>>
+            </select>
+            <select name="tabuadaMult" id="seltabMult" size="10">
+                <option>Multiplicação</option>
+            </select>
+            <select name="tabuadaDiv" id="seltabDiv" size="10">
+                <option>Divisão</option>
             </select>
         </div>
 
